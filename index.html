@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-P">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Interactivo Estilo EdPuzzle</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Video Interactivo</h1>
+
+        <div class="video-loader">
+            <input type="text" id="youtubeUrl" placeholder="Pega la URL de YouTube aquí">
+            <button id="loadVideoButton">Cargar Video</button>
+        </div>
+
+        <div id="player-container">
+            <div id="player"></div>
+        </div>
+
+        <div id="questions-area" class="hidden">
+            <h2 id="question-title">Pregunta:</h2>
+            <p id="question-text"></p>
+            <div id="options-container">
+                <!-- Las opciones se generarán aquí -->
+            </div>
+            <input type="text" id="open-answer" class="hidden" placeholder="Escribe tu respuesta">
+            <button id="submit-answer">Responder / Continuar</button>
+            <p id="feedback" class="hidden"></p>
+        </div>
+
+        <div class="custom-questions-input hidden">
+            <h2>Añadir Preguntas (Opcional - Avanzado)</h2>
+            <p>Formato: tiempo_en_segundos;Tipo(MCQ/OPEN);Texto de la pregunta;Opción1;Opción2;...;RespuestaCorrecta(índice o texto)</p>
+            <textarea id="customQuestions" rows="5" placeholder="Ej: 10;MCQ;¿De qué color es el caballo blanco?;Blanco;Negro;Marrón;0\n25;OPEN;Resume la idea principal."></textarea>
+            <button id="applyCustomQuestions">Aplicar Preguntas Personalizadas</button>
+        </div>
+
+    </div>
+
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script src="script.js"></script>
+</body>
+</html>
